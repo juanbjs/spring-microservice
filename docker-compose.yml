@@ -2,8 +2,20 @@ version: '3'
 
 services:
   config-server:
-      image: config-server:lastest
+      #image: config-server:lastest
       build:
         context: ./configServer
       ports:
         - 7080:80
+      volumes: 
+        - ./configServer/config-server-repository:/opt/config-server-repository
+  eureka-server:
+      #image: config-server:lastest
+      build:
+        context: ./eureka_server
+      ports:
+        - 8761:8761
+      environment: 
+        WAIT_HOSTS: 192.168.0.5:7080
+      depends_on: 
+        - config-server
