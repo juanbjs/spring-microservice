@@ -6,7 +6,7 @@ services:
       build:
         context: ./configServer
       ports:
-        - 7080:80
+        - 7080:7080
       volumes: 
         - ./configServer/config-server-repository:/opt/config-server-repository
   eureka-server:

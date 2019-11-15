@@ -12,4 +12,4 @@ COPY wait-for-config-server.sh /opt/wait-for-it.sh
 RUN chmod +x /opt/wait-for-it.sh
 
 CMD ["/opt/wait-for-it.sh", "http://10.5.2.188:7080/eureka-server/default", "--", "java", "-jar /opt/app.jar"]
-EXPOSE 80
+EXPOSE 7080
