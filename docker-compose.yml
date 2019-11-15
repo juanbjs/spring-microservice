@@ -15,7 +15,5 @@ services:
         context: ./eureka_server
       ports:
         - 8761:8761
-      environment: 
-        WAIT_HOSTS: 192.168.0.5:7080
       depends_on: 
         - config-server
