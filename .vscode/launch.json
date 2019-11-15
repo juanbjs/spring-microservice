@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ConfigController",
+            "request": "launch",
+            "mainClass": "py.com.juanbjs.example.microservice_client.controller.ConfigController"
+        }
+    ]
+}

@@ -1,9 +1,10 @@
 {
     "scripts": {
         "build-config-server":"cd configServer && mvn clean package",
-        "build-eureka-service":"cd eureka_server && mvn clean package",
+        "build-eureka-server":"cd eureka_server && mvn clean package",
+        "build-microservice_client":"cd microservice_client && mvn clean package",
         "build-docker": "docker-compose build && docker-compose up -d",
         "deploy-docker": "docker-compose up -d",
-        "build-and-deploy":"npm run build-config-server && npm run build-eureka-service && npm run build-docker"
+        "build-and-deploy":"npm run build-config-server && npm run build-eureka-server && npm run build-microservice_client && npm run build-docker"
     }
 }

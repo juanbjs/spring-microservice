@@ -2,7 +2,6 @@ version: '3'
 
 services:
   config-server:
-      #image: config-server:lastest
       build:
         context: ./configServer
       ports:
@@ -10,10 +9,16 @@ services:
       volumes: 
         - ./configServer/config-server-repository:/opt/config-server-repository
   eureka-server:
-      #image: config-server:lastest
       build:
         context: ./eureka_server
       ports:
         - 8761:8761
       depends_on: 
         - config-server
+  microserice-cliente:
+      build:
+        context: ./microservice_client
+      ports:
+        - 7081:7081
+      depends_on: 
+        - eureka-server
